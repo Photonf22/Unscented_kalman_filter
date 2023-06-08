@@ -32,9 +32,9 @@ public:
 
 	Highway(pcl::visualization::PCLVisualizer::Ptr& viewer)
 	{
-
+		std::cout << "here10" <<endl;
 		tools = Tools();
-	
+					std::cout << "here8" <<endl;
 		egoCar = Car(Vect3(0, 0, 0), Vect3(4, 2, 2), Color(0, 1, 0), 0, 0, 2, "egoCar");
 		
 		Car car1(Vect3(-10, 4, 0), Vect3(4, 2, 2), Color(0, 0, 1), 5, 0, 2, "car1");
@@ -56,7 +56,7 @@ public:
 			car1.setUKF(ukf1);
 		}
 		traffic.push_back(car1);
-		
+				std::cout << "here0" <<endl;
 		Car car2(Vect3(25, -4, 0), Vect3(4, 2, 2), Color(0, 0, 1), -6, 0, 2, "car2");
 		std::vector<accuation> car2_instructions;
 		a = accuation(4.0*1e6, 3.0, 0.0);
@@ -94,9 +94,9 @@ public:
 			car3.setUKF(ukf3);
 		}
 		traffic.push_back(car3);
-
+		std::cout << "here0" <<endl;
 		lidar = new Lidar(traffic,0);
-	
+		std::cout << "here1" <<endl;
 		// render environment
 		renderHighway(0,viewer);
 		egoCar.render(viewer);

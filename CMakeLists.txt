@@ -1,23 +1,26 @@
-cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
-
-add_definitions(-std=c++11)
+cmake_minimum_required(VERSION 3.14)
+#cmake_policy(SET CMP0074 NEW)    # respect <PACKAGE>_ROOT variables in "find_package"
+#include(CMakePrintHelpers)
+#set(CMAKE_CXX_STANDARD 14)
+add_definitions(-std=c++14)
 
 set(CXX_FLAGS "-Wall")
-set(CMAKE_CXX_FLAGS, "${CXX_FLAGS}")
-
+set(CMAKE_CXX_FLAGS, "${CXX_FLAGS}" "${CMAKE_CXX_FLAGS}" "-pthread" "-D_GLIBCXX_USE_CXX11_ABI=1" "-g")
 project(playback)
 
-find_package(PCL 1.2 REQUIRED)
-
+find_package(PCL 1.10 REQUIRED)
+find_package(Eigen3 3.4.0 REQUIRED NO_MODULE)
+find_package(Qt5Core REQUIRED)
+find_package(Qt5Test REQUIRED)
+find_package(Qt5Widgets REQUIRED)
+find_package(Qt5 REQUIRED COMPONENTS Concurrent)
+find_package(Ceres REQUIRED)
 include_directories(${PCL_INCLUDE_DIRS})
 link_directories(${PCL_LIBRARY_DIRS})
 add_definitions(${PCL_DEFINITIONS})
 list(REMOVE_ITEM PCL_LIBRARIES "vtkproj4")
 
-
 add_executable (ukf_highway src/main.cpp src/ukf.cpp src/tools.cpp src/render/render.cpp)
 target_link_libraries (ukf_highway ${PCL_LIBRARIES})
-
-
-
-
+target_link_libraries(ukf_highway Qt5::Test)
+target_link_libraries(ukf_highway Qt5::Concurrent)
