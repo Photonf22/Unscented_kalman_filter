@@ -1,4 +1,4 @@
-set(CMAKE_CXX_COMPILER "/usr/bin/c++")
+set(CMAKE_CXX_COMPILER "/usr/bin/g++")
 set(CMAKE_CXX_COMPILER_ARG1 "")
 set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_CXX_COMPILER_VERSION "9.4.0")
@@ -77,7 +77,7 @@ endif()
 
 
 
-set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "/usr/local/cuda-12.1/targets/x86_64-linux/include;/usr/local/cuda-12.1/include/CL;/usr/include/opencv4/opencv2;/home/reloadf22/.local/lib/python3.8/site-packages/torch/include/torch/csrc/api/include;/home/reloadf22/.local/lib/python3.8/site-packages/torch/include/torch/csrc;/home/reloadf22/.local/lib/python3.8/site-packages/torch/include;/usr/include/pcl-1.10/pcl;/usr/include/opencv4;/usr/include/flann;/usr/include/c++/9;/usr/include/x86_64-linux-gnu/c++/9;/usr/include/c++/9/backward;/usr/lib/gcc/x86_64-linux-gnu/9/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include")
+set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "/usr/local/cuda-12.1/targets/x86_64-linux/include;/usr/local/cuda-12.1/include/CL;/usr/include/opencv4/opencv2;/home/reloadf22/.local/lib/python3.8/site-packages/torch/include/torch/csrc/api/include;/home/reloadf22/.local/lib/python3.8/site-packages/torch/include/torch/csrc;/home/reloadf22/.local/lib/python3.8/site-packages/torch/include;/usr/include/opencv4;/usr/include/c++/9;/usr/include/x86_64-linux-gnu/c++/9;/usr/include/c++/9/backward;/usr/lib/gcc/x86_64-linux-gnu/9/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include")
 set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "stdc++;m;gcc_s;gcc;c;gcc_s;gcc")
-set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "/usr/local/cuda-12.1/lib;/usr/local/cuda/lib;/WSL2-Linux-Kernel/lib;/home/reloadf22/repos/cudnn-linux-x86_64-8.9.0.131_cuda12-archive/lib;/lib/wsl/lib;/usr/local/cuda-12.1/targets/x86_64-linux/lib;/usr/lib/gcc/x86_64-linux-gnu/9;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib;/usr/local/cuda-12.1/lib64;/usr/local/cuda/lib64;/usr/local/cuda-12.1/targets/x86_64-linux/lib/stubs;/opt/cmake-3.26.3-linux-x86_64")
+set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "/usr/local/cuda-12.1/lib;/usr/local/cuda/lib;/WSL2-Linux-Kernel/lib;/home/reloadf22/repos/cudnn-linux-x86_64-8.9.0.131_cuda12-archive/lib;/lib/wsl/lib;/usr/lib/gcc/x86_64-linux-gnu/9;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib;/usr/local/cuda-12.1/lib64;/usr/local/cuda/lib64;/usr/local/cuda-12.1/targets/x86_64-linux/lib/stubs")
 set(CMAKE_CXX_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

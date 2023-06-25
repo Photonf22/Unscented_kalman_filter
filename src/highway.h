@@ -24,17 +24,15 @@ public:
 	// Visualize sensor measurements
 	bool visualize_lidar = true;
 	bool visualize_radar = true;
-	bool visualize_pcd = false;
+	bool visualize_pcd = true;
 	// Predict path in the future using UKF
-	double projectedTime = 0;
-	int projectedSteps = 0;
+	double projectedTime = 2;
+	int projectedSteps = 6;
 	// --------------------------------
 
 	Highway(pcl::visualization::PCLVisualizer::Ptr& viewer)
 	{
-		std::cout << "here10" <<endl;
 		tools = Tools();
-					std::cout << "here8" <<endl;
 		egoCar = Car(Vect3(0, 0, 0), Vect3(4, 2, 2), Color(0, 1, 0), 0, 0, 2, "egoCar");
 		
 		Car car1(Vect3(-10, 4, 0), Vect3(4, 2, 2), Color(0, 0, 1), 5, 0, 2, "car1");
@@ -56,7 +54,6 @@ public:
 			car1.setUKF(ukf1);
 		}
 		traffic.push_back(car1);
-				std::cout << "here0" <<endl;
 		Car car2(Vect3(25, -4, 0), Vect3(4, 2, 2), Color(0, 0, 1), -6, 0, 2, "car2");
 		std::vector<accuation> car2_instructions;
 		a = accuation(4.0*1e6, 3.0, 0.0);
@@ -94,9 +91,7 @@ public:
 			car3.setUKF(ukf3);
 		}
 		traffic.push_back(car3);
-		std::cout << "here0" <<endl;
 		lidar = new Lidar(traffic,0);
-		std::cout << "here1" <<endl;
 		// render environment
 		renderHighway(0,viewer);
 		egoCar.render(viewer);
@@ -133,6 +128,7 @@ public:
 				tools.lidarSense(traffic[i], viewer, timestamp, visualize_lidar);
 				tools.radarSense(traffic[i], egoCar, viewer, timestamp, visualize_radar);
 				tools.ukfResults(traffic[i],viewer, projectedTime, projectedSteps);
+				
 				VectorXd estimate(4);
 				double v  = traffic[i].ukf.x_(2);
     			double yaw = traffic[i].ukf.x_(3);
@@ -140,7 +136,6 @@ public:
     			double v2 = sin(yaw)*v;
 				estimate << traffic[i].ukf.x_[0], traffic[i].ukf.x_[1], v1, v2;
 				tools.estimations.push_back(estimate);
-	
 			}
 		}
 		viewer->addText("Accuracy - RMSE:", 30, 300, 20, 1, 1, 1, "rmse");
@@ -149,10 +144,8 @@ public:
 		viewer->addText(" Y: "+std::to_string(rmse[1]), 30, 250, 20, 1, 1, 1, "rmse_y");
 		viewer->addText("Vx: "	+std::to_string(rmse[2]), 30, 225, 20, 1, 1, 1, "rmse_vx");
 		viewer->addText("Vy: "	+std::to_string(rmse[3]), 30, 200, 20, 1, 1, 1, "rmse_vy");
-
 		if(timestamp > 1.0e6)
 		{
-
 			if(rmse[0] > rmseThreshold[0])
 			{
 				rmseFailLog[0] = rmse[0];

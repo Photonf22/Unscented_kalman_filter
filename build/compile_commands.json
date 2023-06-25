@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/home/reloadf22/workspace/SFND_Unscented_Kalman_Filter/build",
+  "command": "/usr/bin/g++ -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_IOSTREAMS_DYN_LINK -DBOOST_SERIALIZATION_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -Dkiss_fft_scalar=double -Dqh_QHpointer -isystem /usr/local/include/pcl-1.13 -isystem /usr/local/include/eigen3 -isystem /usr/include/ni -isystem /usr/include/openni2 -isystem /usr/local/include/vtk-9.2 -isystem /usr/local/include/vtk-9.2/vtknlohmannjson/include -isystem /usr/local/include/vtk-9.2/vtkfreetype/include -g   -std=c++14 -msse4.2 -mfpmath=sse -march=native -mavx2 -o CMakeFiles/ukf_highway.dir/src/main.cpp.o -c /home/reloadf22/workspace/SFND_Unscented_Kalman_Filter/src/main.cpp",
+  "file": "/home/reloadf22/workspace/SFND_Unscented_Kalman_Filter/src/main.cpp",
+  "output": "CMakeFiles/ukf_highway.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/reloadf22/workspace/SFND_Unscented_Kalman_Filter/build",
+  "command": "/usr/bin/g++ -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_IOSTREAMS_DYN_LINK -DBOOST_SERIALIZATION_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -Dkiss_fft_scalar=double -Dqh_QHpointer -isystem /usr/local/include/pcl-1.13 -isystem /usr/local/include/eigen3 -isystem /usr/include/ni -isystem /usr/include/openni2 -isystem /usr/local/include/vtk-9.2 -isystem /usr/local/include/vtk-9.2/vtknlohmannjson/include -isystem /usr/local/include/vtk-9.2/vtkfreetype/include -g   -std=c++14 -msse4.2 -mfpmath=sse -march=native -mavx2 -o CMakeFiles/ukf_highway.dir/src/ukf.cpp.o -c /home/reloadf22/workspace/SFND_Unscented_Kalman_Filter/src/ukf.cpp",
+  "file": "/home/reloadf22/workspace/SFND_Unscented_Kalman_Filter/src/ukf.cpp",
+  "output": "CMakeFiles/ukf_highway.dir/src/ukf.cpp.o"
+},
+{
+  "directory": "/home/reloadf22/workspace/SFND_Unscented_Kalman_Filter/build",
+  "command": "/usr/bin/g++ -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_IOSTREAMS_DYN_LINK -DBOOST_SERIALIZATION_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -Dkiss_fft_scalar=double -Dqh_QHpointer -isystem /usr/local/include/pcl-1.13 -isystem /usr/local/include/eigen3 -isystem /usr/include/ni -isystem /usr/include/openni2 -isystem /usr/local/include/vtk-9.2 -isystem /usr/local/include/vtk-9.2/vtknlohmannjson/include -isystem /usr/local/include/vtk-9.2/vtkfreetype/include -g   -std=c++14 -msse4.2 -mfpmath=sse -march=native -mavx2 -o CMakeFiles/ukf_highway.dir/src/tools.cpp.o -c /home/reloadf22/workspace/SFND_Unscented_Kalman_Filter/src/tools.cpp",
+  "file": "/home/reloadf22/workspace/SFND_Unscented_Kalman_Filter/src/tools.cpp",
+  "output": "CMakeFiles/ukf_highway.dir/src/tools.cpp.o"
+},
+{
+  "directory": "/home/reloadf22/workspace/SFND_Unscented_Kalman_Filter/build",
+  "command": "/usr/bin/g++ -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_IOSTREAMS_DYN_LINK -DBOOST_SERIALIZATION_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -Dkiss_fft_scalar=double -Dqh_QHpointer -isystem /usr/local/include/pcl-1.13 -isystem /usr/local/include/eigen3 -isystem /usr/include/ni -isystem /usr/include/openni2 -isystem /usr/local/include/vtk-9.2 -isystem /usr/local/include/vtk-9.2/vtknlohmannjson/include -isystem /usr/local/include/vtk-9.2/vtkfreetype/include -g   -std=c++14 -msse4.2 -mfpmath=sse -march=native -mavx2 -o CMakeFiles/ukf_highway.dir/src/render/render.cpp.o -c /home/reloadf22/workspace/SFND_Unscented_Kalman_Filter/src/render/render.cpp",
+  "file": "/home/reloadf22/workspace/SFND_Unscented_Kalman_Filter/src/render/render.cpp",
+  "output": "CMakeFiles/ukf_highway.dir/src/render/render.cpp.o"
+}
+]
